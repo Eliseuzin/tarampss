@@ -104,6 +104,7 @@ input {
 
 button:active {
   opacity: 0.8;
+  display: none;
 }
 
 button:hover {

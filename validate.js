@@ -87,35 +87,40 @@ city.addEventListener('keyup',()=>{
   }
 
 })
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   if(validUserNAME && validcnpj && validcity && validphone){
+//     //message successfully
+//     success.setAttribute('style','display:block');
+//     success.innerHTML="Cadastrando usuário..."
+//     error.setAttribute('style','display:none');
+//     error.innerHTML="";
+//     // alert("Deu bom!")
+//   }else{
+//     // alert("Preenchar os campos corretamente, por favor!")
+//     //message unsuccessful
+//     error.setAttribute('style','display:block');
+//     error.innerHTML="Preenchar os campos corretamente, por favor!";
+//     success.setAttribute('style','display:none');
+//     success.innerHTML=""
+//   }
+// });
+
+//deixar no cadastrar para futuramente fazer uma manipulçao no submit
+function cadastrar(){
+  // alert('botao clicado');
   if(validUserNAME && validcnpj && validcity && validphone){
-    //message successfully
     success.setAttribute('style','display:block');
     success.innerHTML="Cadastrando usuário..."
     error.setAttribute('style','display:none');
     error.innerHTML="";
-    // alert("Deu bom!")
   }else{
-    // alert("Preenchar os campos corretamente, por favor!")
-    //message unsuccessful
     error.setAttribute('style','display:block');
     error.innerHTML="Preenchar os campos corretamente, por favor!";
     success.setAttribute('style','display:none');
     success.innerHTML=""
   }
-});
-// function cadastrar(){
-//   // alert('botao clicado');
-//   if(validUserNAME && validcnpj && validcity && validphone){
-//     success.setAttribute('style','display:block')
-//     // alert("Deu bom!")
-//   }else{
-//     // alert("Preenchar os campos corretamente, por favor!")
-//     error.setAttribute('style','display:block')
-
-//   }
-// }
+}
 function setErrorFor(input, message) {
   const formControl = input.parentElement;
   const small = formControl.querySelector("small");
